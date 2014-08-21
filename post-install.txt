@@ -1,0 +1,7 @@
+echo -n "Download and run postinstall.sh script in the chroot..."
+wget -q -O - http://192.168.1.75/pxe/postinstall.sh | chroot /rootfs sh
+if [ $? -eq 0 ]; then
+    echo "OK"
+else
+    echo "FAILED !"
+fi
