@@ -9,3 +9,4 @@ ip_addr=dhcp
 #online_config= # URL to extra config that will be executed after installer-config.txt
 rootfstype=ext4
 usbroot=1
+cmdline="dwc_otg.lpm_enable=0 elevator=deadline"
