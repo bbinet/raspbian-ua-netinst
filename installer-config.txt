@@ -1,5 +1,5 @@
 preset=server
-release=wheezy
+release=jessie
 hostname=pi
 domainname=
 rootpw=raspbian
