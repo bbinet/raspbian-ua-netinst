@@ -13,14 +13,6 @@ if [ "$1" == "--update" ]
 then
     ./update.sh
 fi
-
-# This is a workaround for https://github.com/debian-pi/raspbian-ua-netinst/issues/80.
-if [ ! -f "packages/busybox-static_1.22.0-7_armhf.deb" ]
-then
-    rm -f packages/busybox-static*
-    curl -o packages/busybox-static_1.22.0-7_armhf.deb https://archive.raspbian.org/raspbian/pool/main/b/busybox/busybox-static_1.20.0-7_armhf.deb
-fi
-
 ./build.sh
 
 # copy master controller custom configuration
